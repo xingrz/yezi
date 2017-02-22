@@ -1,0 +1,28 @@
+:local .input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  margin: 30px 0;
+
+  outline: none;
+
+  border: none;
+  border-bottom: 2px solid #DDD;
+
+  font-size: 120%;
+
+  line-height: 1.4;
+
+  color: #555;
+
+  transition: border 400ms;
+
+  &:hover {
+    border-bottom-color: #999;
+  }
+
+  &:focus {
+    border-bottom-color: #777;
+  }
+}
