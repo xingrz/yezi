@@ -1,4 +1,4 @@
-[椰子模板](http://xingrz.me/yezi)
+[椰子模板](http://yezi.xingrz.me/)
 ==========
 
 ## 开发
