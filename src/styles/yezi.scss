@@ -10,6 +10,7 @@ $white: #FFF;
   width: 300px;
   padding-bottom: 2px;
   background: $black;
+  word-break: break-all;
 }
 
 :local .inner {
