@@ -62,13 +62,10 @@
 }
 
 :local .big {
-  font-size: 240px;
+  font-size: 180px;
   font-weight: bold;
   color: yellow;
-  transform: scaleY(0.70);
-  transform-origin: top;
-  height: 336px;
-  line-height: 240px;
+  transform: scaleX(1.30);
   margin: 10px 0;
 }
 
