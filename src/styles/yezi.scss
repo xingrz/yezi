@@ -96,3 +96,19 @@ $white: #FFF;
   transform: scaleX(0.9);
   margin: 5px 0;
 }
+
+:local .excited {
+  font-size: 14px;
+  color: #CCC;
+
+  padding: 10px 0;
+
+  a, a:visited {
+    color: #CCC;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

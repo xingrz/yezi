@@ -38,6 +38,10 @@ export default class Preview extends Component {
           <div className={styles.footerText}>{this.props.end}</div>
         </div>
 
+        <div className={styles.excited}>
+          由 <a href="http://excited.aja.im/">@_馒头好不好_</a> 生成
+        </div>
+
       </div>
     );
   }
