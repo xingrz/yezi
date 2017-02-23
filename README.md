@@ -4,6 +4,7 @@
 ## 开发
 
 ```sh
+npm install
 npm run dev
 ```
 
