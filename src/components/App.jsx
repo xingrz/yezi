@@ -9,21 +9,31 @@ import Downloader from './Downloader';
 export default class App extends Component {
 
   state = {
-    top: '这包装也有模板了',
-    real: '真 的',
-    brand: '可以',
-    year: 'HTML',
-    small: '加点样式手写',
-    sub: '做成通用模板',
+    top: '认真做产品做不火',
+    real: '搞 这 种',
+    brand: '有毒',
+    year: '海报',
+    small: '就火成这样',
+    sub: '"馒头好不好"',
     big: '很强',
-    foot: '真的设计',
-    end: '黑白蓝黄红全用',
+    foot: '快去下载',
+    end: '在各大应用商店',
+    excited: false,
   };
+
+  componentDidMount() {
+    this.setState({ excited: !!localStorage.getItem('excited') })
+  }
 
   async save() {
     const canvas = await this.preview.toCanvas();
     const png = canvas.toDataURL('image/png');
     this.downloader.download(png, `${this.state.brand}.png`);
+  }
+
+  excited() {
+    window.location = 'https://excited.aja.im/';
+    localStorage.setItem('excited', true);
   }
 
   render() {
@@ -82,8 +92,15 @@ export default class App extends Component {
           />
 
           <p>
+            <Button
+              style={{ background: '#FE0' }}
+              onClick={this.excited.bind(this)}
+            >下载「馒头好不好」去水印</Button>
+          </p>
+
+          <p style={{ marginTop: 10 }}>
             <Button onClick={this.save.bind(this)}>保存图片</Button>
-            <span style={{ fontSize: 12, marginLeft: 4 }}>（可能有 BUG，不行截图）</span>
+            <span style={{ fontSize: 16, marginLeft: 4 }}>（可能有 BUG，不行截图）</span>
           </p>
 
           <Downloader ref={ref => this.downloader = ref} />
