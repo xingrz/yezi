@@ -1,4 +1,3 @@
-const join = require('path').join
 const webpack = require('webpack')
 
 module.exports = {
@@ -16,8 +15,8 @@ module.exports = {
   devtool: 'inline-source-map',
 
   output: {
-    path: join(__dirname, 'assets'),
-    publicPath: '/assets/',
+    path: __dirname,
+    publicPath: '/',
     filename: '[name].js',
   },
 

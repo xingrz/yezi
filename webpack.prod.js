@@ -1,4 +1,3 @@
-const join = require('path').join
 const webpack = require('webpack')
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -15,8 +14,8 @@ module.exports = {
   },
 
   output: {
-    path: join(__dirname, 'assets'),
-    publicPath: '/assets/',
+    path: __dirname,
+    publicPath: '/',
     filename: '[name].js',
   },
 
