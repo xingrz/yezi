@@ -1,16 +1,22 @@
+$black: #000;
+$yellow: #FE0;
+$red: #F00;
+$blue: #05F;
+$white: #FFF;
+
 :local .outer {
-  border-left: 20px solid yellow;
-  border-right: 20px solid yellow;
+  border-left: 20px solid $yellow;
+  border-right: 20px solid $yellow;
   width: 300px;
   padding-bottom: 2px;
-  background: black;
+  background: $black;
 }
 
 :local .inner {
   padding-top: 10px;
-  border-left: 20px solid black;
-  border-right: 20px solid black;
-  background: yellow;
+  border-left: 20px solid $black;
+  border-right: 20px solid $black;
+  background: $yellow;
 }
 
 :local .top {
@@ -21,8 +27,8 @@
 }
 
 :local .main {
-  background: blue;
-  color: white;
+  background: $blue;
+  color: $white;
   padding: 5px 0;
   margin: 0 5px;
 }
@@ -35,8 +41,8 @@
 :local .brand {
   margin: 0 10px;
   padding: 5px 0;
-  background: red;
-  border: 3px solid yellow;
+  background: $red;
+  border: 3px solid $yellow;
   border-radius: 20px;
   font-size: 80px;
   font-weight: bold;
@@ -49,32 +55,32 @@
 }
 
 :local .small {
-  color: yellow;
+  color: $yellow;
 }
 
 :local .sub {
   margin: 10px 0;
   padding: 2px 0;
-  border: 4px solid red;
+  border: 4px solid $red;
   border-radius: 2px;
-  background: yellow;
-  color: red;
+  background: $yellow;
+  color: $red;
 }
 
 :local .big {
   font-size: 180px;
   font-weight: bold;
-  color: yellow;
+  color: $yellow;
   transform: scaleX(1.30);
   margin: 10px 0;
 }
 
 :local .footer {
-  border: 2px solid yellow;
+  border: 2px solid $yellow;
   border-radius: 10px;
-  background: red;
+  background: $red;
   margin: 0 5px;
-  color: white;
+  color: $white;
 }
 
 :local .footerTitle {
