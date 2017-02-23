@@ -1,0 +1,26 @@
+:local .button {
+  outline: none;
+  border: none;
+
+  background: #EEE;
+
+  color: #555;
+  font-size: 80%;
+
+  padding: 12px 30px;
+
+  transition: background 400ms, box-shadow 400ms;
+
+  &:focus {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  &:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    background: #DDD;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}

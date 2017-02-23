@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
+import html2canvas from 'html2canvas';
 
 import styles from '../styles/yezi';
 
 export default class Preview extends Component {
 
+  toCanvas() {
+    return html2canvas(this.element);
+  }
+
   render() {
     return (
-      <div className={styles.outer}>
+      <div className={styles.outer} ref={ref => this.element = ref}>
         <div className={styles.inner}>
 
           <div className={styles.top}>{this.props.top}</div>

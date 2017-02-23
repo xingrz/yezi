@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import styles from '../styles/main';
 import Preview from './Preview';
 import Input from './Input';
+import Button from './Button';
+import Downloader from './Downloader';
 
 export default class App extends Component {
 
@@ -18,12 +20,18 @@ export default class App extends Component {
     end: '黑白蓝黄红全用',
   };
 
+  async save() {
+    const canvas = await this.preview.toCanvas();
+    const png = canvas.toDataURL('image/png');
+    this.downloader.download(png, `${this.state.brand}.png`);
+  }
+
   render() {
     return (
       <div className={styles.container}>
 
         <div className={styles.preview}>
-          <Preview {...this.state} />
+          <Preview {...this.state} ref={ref => this.preview = ref} />
         </div>
 
         <div className={styles.editor}>
@@ -72,6 +80,10 @@ export default class App extends Component {
             value={this.state.end}
             onChangeValue={value => this.setState({ end: value })}
           />
+
+          <Button onClick={this.save.bind(this)}>保存图片</Button>
+
+          <Downloader ref={ref => this.downloader = ref} />
 
         </div>
 
