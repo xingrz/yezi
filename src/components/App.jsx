@@ -81,7 +81,10 @@ export default class App extends Component {
             onChangeValue={value => this.setState({ end: value })}
           />
 
-          <Button onClick={this.save.bind(this)}>保存图片</Button>
+          <p>
+            <Button onClick={this.save.bind(this)}>保存图片</Button>
+            <span style={{ fontSize: 12, marginLeft: 4 }}>（可能有 BUG，不行截图）</span>
+          </p>
 
           <Downloader ref={ref => this.downloader = ref} />
 
