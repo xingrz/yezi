@@ -14,7 +14,7 @@ export default class App extends Component {
     brand: '有毒',
     year: '海报',
     small: '就火成这样',
-    sub: '"馒头好不好"',
+    sub: '馒头好不好',
     big: '很强',
     foot: '快去下载',
     end: '在各大应用商店',
