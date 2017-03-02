@@ -40,7 +40,7 @@ export default class Preview extends Component {
 
         {this.props.excited ? null : (
           <div className={styles.excited}>
-            由 <a href="http://excited.aja.im/">@_馒头好不好_</a> 生成
+            由 <a href="http://excited.aja.im/">@馒头好不好</a> 生成
           </div>
         )}
 
