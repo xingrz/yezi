@@ -6,7 +6,6 @@ module.exports = {
 
   entry: {
     main: [
-      'babel-polyfill',
       'normalize.css',
       './src/styles/main.scss',
       './src/client.js',
