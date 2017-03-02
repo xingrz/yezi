@@ -49,15 +49,17 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
     new webpack.optimize.UglifyJsPlugin({
       output: { comments: false }
     }),
     new ExtractTextPlugin({
       filename: '[name].css',
       allChunks: true,
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      output: { comments: false }
     }),
   ],
 
